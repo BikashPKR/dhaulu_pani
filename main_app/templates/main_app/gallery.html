@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Gallery</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+<nav class="navbar">
+
+<div class="logo">
+<img src="Logo.jpeg">
+<h2>Rara Processing</h2>
+</div>
+
+<ul class="nav-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="products.html">Products</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="order.html" class="order-btn">Order Now</a></li>
+</ul>
+
+</nav>
+</header>
+
+<section class="gallery">
+
+<h1>Water Bottle Gallery</h1>
+
+<div class="gallery-container">
+
+<img src="Bollte1.jpeg">
+<img src="Bottle2.jpeg">
+<img src="Bottle3.jpeg">
+
+
+</div>
+
+</section>
+<script>
+
+let slides =
+document.querySelectorAll(".slide");
+
+let index = 0;
+
+function showSlide() {
+
+slides.forEach(slide =>
+slide.classList.remove("active"));
+
+slides[index]
+.classList.add("active");
+
+index++;
+
+if(index >= slides.length) {
+
+index = 0;
+
+}
+
+}
+
+setInterval(showSlide, 3000);
+
+showSlide();
+
+</script>
+
+<footer>
+<p>© 2026 Rara Processing Pvt. Ltd.</p>
+</footer>
+
+</body>
+</html>
